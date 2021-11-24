@@ -1,11 +1,11 @@
 import Task from "./Task";
 
-const TaskList = ({tasks}) => {
+const TaskList = ({tasks, onTaskCompletion}) => {
 
     //breaking up array of tasks into indiviual tasks
     const taskComponent = tasks.map(task => {
         return(
-            <Task tasks={task} key={task.id}/>
+            <Task tasks={task} key={task.id} onTaskCompletion={onTaskCompletion}/>
         )
     })
 
